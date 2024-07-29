@@ -56,7 +56,7 @@ const Editor = ({
             {analysisData.map((item) => (
               <li
                 key={item.name}
-                className="px-2 py-4 flex border-b border-t border-black/10 items-center justify-between"
+                className="px-2 py-4 flex border-b border-t border-black/10 items-center gap-2 justify-between"
               >
                 <p className="text-lg font-semibold">{item.name}</p>
                 <p className="text-end">{item.value}</p>
