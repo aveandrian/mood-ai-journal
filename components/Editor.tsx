@@ -26,6 +26,7 @@ const Editor = ({
   useAutosave({
     data: value,
     onSave: async (newVal) => {
+      if (!newVal) return
       setIsLoading(true)
       const updated = await updateEntry(entry.id, newVal)
       setAnalysis(updated.analysis)
@@ -37,7 +38,7 @@ const Editor = ({
     <div className="w-full h-full grid grid-cols-1 md:grid-cols-3">
       <div className="col-span-2 h-full">
         {isLoading && (
-          <div className="bg-white flex items-center justify-center text-muted-foreground">
+          <div className="bg-white flex items-center justify-center text-muted-foreground py-4">
             ...loading
           </div>
         )}

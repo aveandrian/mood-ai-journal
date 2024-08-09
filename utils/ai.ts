@@ -69,15 +69,18 @@ export const qa = async (
   entries: Partial<JournalEntry>[]
 ) => {
   const docs = entries.map((entry) => {
+    if (!entry.content) {
+      throw new Error('No content for entry')
+    }
     return new Document({
-      pageContent: entry.content!,
+      pageContent: entry.content,
       metadata: { id: entry.id, createdAt: entry.createdAt },
     })
   })
 
   const model = new OpenAI({ temperature: 0 })
   const chain = loadQARefineChain(model)
-  const embeddings = new OpenAIEmbeddings()
+  const embeddings = new OpenAIEmbeddings({ model: 'text-embedding-3-small' })
   const store = await MemoryVectorStore.fromDocuments(docs, embeddings)
   const relevantDocs = await store.similaritySearch(question)
 

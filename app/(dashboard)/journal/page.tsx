@@ -28,8 +28,8 @@ const JournalPage = async () => {
 
   return (
     <div className="p-4 md:p-10 h-full ">
-      <h2 className="text-3xl mb-8 ">Journal</h2>
-      <div className="my-8">
+      <h2 className="text-3xl mb-8 px-6 font-semibold">Journal</h2>
+      <div className="my-8 p-6">
         <Question />
       </div>
       <div className="flex flex-col gap-6 p-6 sm:p-8">
