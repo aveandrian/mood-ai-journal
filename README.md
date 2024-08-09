@@ -1,6 +1,9 @@
 # AI-Powered Journal Application
 
-This repository contains a NextJS application that serves as a personal journal with AI-powered analysis features. The application analyzes the mood, subject, summary, sentiment, and determines if an entry is negative. It also includes a history page displaying a sentiment graph over time.
+Personal journal with AI-powered analysis features. Mood app analyzes the mood (unexpected??), subject, summary, sentiment, and determines if an entry is negative. It also includes a history page displaying a sentiment graph over time.
+
+<img width="1441" alt="seo-image" src="https://github.com/user-attachments/assets/28b13d37-5f5f-48a5-9f94-a96e98da4f43">
+
 
 ## Features
 
